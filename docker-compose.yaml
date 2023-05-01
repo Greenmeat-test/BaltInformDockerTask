@@ -15,11 +15,6 @@ services:
       - 9042:9042
     volumes:
       - ./data/cassandra-1:/var/lib/cassandra
-    deploy:
-      resources:
-        limits:
-          cpus: '0.1'
-          memory: '512M'
 
   cassandra-2:
     image: cassandra:latest
@@ -35,11 +30,6 @@ services:
       - 9043:9042
     volumes:
       - ./data/cassandra-2:/var/lib/cassandra
-    deploy:
-      resources:
-        limits:
-          cpus: '0.1'
-          memory: '512M'
 
   cassandra-3:
     image: cassandra:latest
@@ -55,8 +45,3 @@ services:
       - 9044:9042
     volumes:
       - ./data/cassandra-3:/var/lib/cassandra
-    deploy:
-      resources:
-        limits:
-          cpus: '0.1'
-          memory: '512M'
